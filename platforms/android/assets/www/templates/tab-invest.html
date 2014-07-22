@@ -1,0 +1,24 @@
+<ion-view title="投资">
+  <ion-content class="has-header">
+    <ion-refresher on-refresh="doRefresh()" pulling-text="下拉刷新..." refreshing-text="加载中..." refreshing-icon="ion-loading-c">
+    </ion-refresher>
+  	<ion-list show-delete="data.showDelete" show-reorder="data.showReorder" can-swipe="true">
+
+        <a ng-repeat="invest in invests" href="#/tab/invest/{{invest.id}}" class="item item-icon-left item-icon-right">
+          <i class="icon balanced {{ invest.image }}"></i>
+          <h2 class="">{{ invest.name }}</h2>
+          <p>
+          	<span class="padding-right">金额:<span class="energized">{{ invest.amount }}</span></span>
+          	<span class="padding-right">年利率:<span class="energized">{{ invest.year_rate }}</span></span>
+          	<span class="padding-right">周期:<span class="energized">{{ invest.period }}</span></span>
+          </p>
+          <p>
+          	<span class="padding-right">进度:<span class="energized">{{ invest.progress }}</span></span>
+            <span class="padding-right balanced" ng-repeat="lab in invest.labels">{{ lab }}</span>
+          </p>
+          <i class="icon {{ invest.status }}"></i>
+        </a>
+        <a ng-click="more()" class="button button-full button-light" style="margin-top:0; color:#666;"> {{ more_name }} </a>
+    </ion-list>
+  </ion-content>
+</ion-view>

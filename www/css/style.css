@@ -1,0 +1,40 @@
+/* Empty. Add your own CSS if you like */
+
+.home-news {
+	height: 150px;
+}
+
+.button-shortcut {
+	line-height: 14px;
+	border: none;
+	border-radius: 0;
+}
+.ion-shortcut {
+	height: 32px;
+}
+
+
+.button.button-stable {
+	background-color: #e5e5e5;
+}
+
+.center {
+	text-align: center;
+}
+
+.item-icon-left .icon-accessory.assertive, .item-icon-right .icon-accessory.assertive {
+    color: #ef4e3a;
+    font-size: 16px;
+}
+
+.border {
+	border: 1px solid #ccc;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.opacity100 {
+	opacity: 1 important!;
+}

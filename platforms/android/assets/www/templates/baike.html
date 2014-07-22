@@ -1,0 +1,12 @@
+<ion-view title="盛开百科">
+  <ion-content class="has-header">
+    <ion-list>
+    	<a ng-repeat="baike in baikes" class="item item-icon-right" href="#/tab/service/baike/{{baike.id}}">
+			<span class="balanced">No{{ baike.id + 1 }}</span>
+			{{ baike.name }}
+			<span class="item-note">{{ baike.note }}</span>
+			<i class="icon ion-chevron-right icon-accessory"></i>
+		</a>
+    </ion-list>
+  </ion-content>
+</ion-view>

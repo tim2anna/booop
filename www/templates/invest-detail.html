@@ -1,0 +1,98 @@
+<ion-view title="项目详情">
+
+
+<ion-content has-header="true">
+
+
+<div class="list card">
+	<div class="item item-divider">
+		<h2><i class="icon ion-model-s padding-right energized"></i>{{ invest.name }}</h2>
+	</div>
+	
+	<div class="item item-image">
+		<div class="item tabs tabs-icon-top">
+			<a class="tab-item" style="opacity: 1;">
+				<div class="padding-top">金额</div>
+				<h3 class="assertive bold">1000000元</h3>
+			</a>
+			<a class="tab-item" style="opacity: 1;">
+				<div class="padding-top">年化率</div>
+				<h3 class="assertive bold">15%</h3>
+			</a>
+			<a class="tab-item" style="opacity: 1;">
+				<div class="padding-top">周期</div>
+				<h3 class="assertive bold">1个月</h3>
+			</a>
+		</div>
+	</div>
+	<div class="item item-image">
+		<div class="item tabs tabs-icon-top">
+			<a class="tab-item" style="opacity: 1;">
+				<div class="padding-top">服务介绍</div>
+				<h3>小微企业</h3>
+			</a>
+			<a class="tab-item" style="opacity: 1;">
+				<div class="padding-top">还款方式</div>
+				<h3>按月付息到期还本</h3>
+			</a>
+		</div>
+	</div>
+	<div class="item item-image">
+		<div class="item tabs tabs-icon-top">
+			<a class="tab-item" style="opacity: 1;">
+				<div class="padding-top">结束时间</div>
+				<h3>2014-7-21</h3>
+			</a>
+			<a class="tab-item" style="opacity: 1;">
+				<div class="padding-top">进度</div>
+				<h3>90%</h3>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="list card">
+	<div class="button-bar item-image">
+		<a class="button activated">债权方</a>
+		<a class="button">车行</a>
+		<a class="button">车辆</a>
+	</div>
+
+	<div class="item">
+		<h2>深圳市顺凯汽车销售服务有限公司</h2>
+		<p>职责：对债务方，在车辆逾期时，对车辆进行购买。</p>
+	</div>
+	
+	<div class="item item-image row row-center">
+		<div class="col">
+			<a class="button icon-left ion-chevron-left button-clear button-dark"></a>
+		</div>
+		<div class="image col col-25 border">
+			<img ng-src="img/vest_detail_1.jpg" style="height:100px;"/>
+			<p>抵押物委托评估管理合同</p>
+		</div>
+		<div class="image col col-25 border">
+			<img ng-src="img/vest_detail_1.jpg" style="height:100px;"/>
+			<p>借款合同_01</p>
+		</div>
+		<div class="image col col-25 border">
+			<img ng-src="img/vest_detail_1.jpg" style="height:100px;"/>
+			<p>借款合同_02</p>
+		</div>
+		<div class="col">
+			<a class="button icon-left ion-chevron-right button-clear button-dark"></a>
+		</div>
+	</div>
+</div>
+<div class="padding-bottom"></div>
+</ion-content>
+
+<ion-footer-bar class="bar-balanced" style="margin-bottom:10px;" ng-click="showPrompt()">
+<h1 class="title"><i class="icon ion-social-usd-outline"></i>立即投资</h1>
+</ion-footer-bar>
+
+<script id="popup-template.html" type="text/ng-template">
+<input ng-model="data.invest_money" type="text" placeholder = "请输入投资金额" >
+<div class="center padding-top">预期收益<span class="energized"> {{ data.invest_money * 0.15 }} </span>元</div>
+</script>
+</ion-view>
